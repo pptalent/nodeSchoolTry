@@ -15,28 +15,28 @@ var http=require('http');
   // }))
 
 // });
+
+//9.
 var lineString='',
-    stringArray={},
+    result=[],
     count=0;
 for(var i=0;i<3;i++){
+  httpGet(i);
+}
+function print(){
+  for(var i=0;i<3;i++){
+    console.log(result[i]);
+  }
+}
+function httpGet(i){
   var key=process.argv[i+2];
-  http.get(process.argv[i+2],function(response){
+  http.get(key,function(response){
     response.pipe(bl(function(err,data){
-        
-        console.log(key);
-        stringArray[key]=data.toString();
-        count++;
-        finalLoop(stringArray);
+      result[i]=data.toString();
+      count++;
+      if(count>=3){
+        print();
+      }
     }));
   })
-}
-function finalLoop(stringArray){
-
-  if(count>=3){
-    var key='';
-    for(var i=0;i<3;i++){
-      key=process.argv[i+2].toString();
-      console.log(stringArray[key]);
-    }
-  }
 }
