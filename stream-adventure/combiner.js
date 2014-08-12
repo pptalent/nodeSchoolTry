@@ -4,7 +4,7 @@ var through=require('through');
 var zlib=require('zlib');
 module.exports=function(){
   return combine(
-      split(), //数据可以一行一行的传过来
+      split('\n'), //数据可以一行一行的传过来
       through(writeThrough,endThrough),//把数据一行行读过来，然后执行我的function再写进去
       zlib.createGzip()
   )
