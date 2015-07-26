@@ -1,9 +1,14 @@
-var through=require('through');
-var tr=through(throughWrite);
-function throughWrite(buffer){
-    this.queue(buffer.toString().toUpperCase());
+// through2
+
+var through = require("through2");
+
+process.stdin.pipe(through(write, end)).pipe(process.stdout);
+
+function write(buffer, encoding, next) {
+	this.push(buffer.toString().toUpperCase());
+	next();
 }
-function throughEnd(){
-  // this.queue(null);
+
+function end(done) {
+	done();
 }
-process.stdin.pipe(tr).pipe(process.stdout);

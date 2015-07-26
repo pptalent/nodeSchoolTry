@@ -1,3 +1,5 @@
-var websocket=require('websocket-stream');
-var stream=websocket('websocket://localhost:8000');
-stream.end('hello\n');
+// websocket-stream
+
+var ws = require("websocket-stream");
+var stream = ws('ws://localhost:8099');
+stream.write("hello\n");

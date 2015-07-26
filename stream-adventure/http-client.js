@@ -1,3 +1,5 @@
-var request=require('request');
-var result=request.post('http://localhost:8000');
-process.stdin.pipe(result).pipe(process.stdout);
+// request.post() is a stream both readable and writeable
+
+var request = require("request");
+
+process.stdin.pipe(request.post("http://localhost:8099")).pipe(process.stdout);

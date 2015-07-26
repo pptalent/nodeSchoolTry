@@ -1,9 +1,18 @@
-var fs=require('fs');
-fs.readFile(process.argv[2],'utf8',function(error,data){
-  if(!error){
-    console.log(data.split("\n").length-1)
-  }
-  else{
-    console.log(error);
-  }
-});
+var fs = require("fs");
+var path = require("path");
+
+module.exports = function(dir, ext, cb) {
+	fs.readdir(dir, function(err, data) {
+		if(err) {
+			cb(err);
+			return;
+		}
+		var result = [];
+		for(var i = 0; i < data.length ; i++) {
+			if(path.extname(data[i]).indexOf(ext) !== -1 && path.extname(data).length > 0) {
+				result.push(data[i]);
+			}
+		}
+		cb(null, result);
+	})
+}

@@ -1,0 +1,36 @@
+{
+  "name": "nodeschool",
+  "version": "1.0.0",
+  "description": "nodeSchoolTry ============= Origin plan is angular first , node next.",
+  "main": "index.js",
+  "dependencies": {
+    "bl": "^0.8.2",
+    "duplexer": "^0.1.1",
+    "split": "^0.3.0",
+    "request": "^2.40.0",
+    "stream-combiner": "^0.2.1",
+    "strftime": "^0.8.1",
+    "tar": "^1.0.0",
+    "through2-map": "^1.4.0",
+    "through": "^2.3.4",
+    "trumpet": "^1.6.5",
+    "websocket-stream": "^0.6.0",
+    "zlib": "^1.0.5",
+    "formidable": "^1.0.15",
+    "concat-stream": "^1.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wwayne/nodeSchoolTry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wwayne/nodeSchoolTry/issues"
+  },
+  "homepage": "https://github.com/wwayne/nodeSchoolTry"
+}

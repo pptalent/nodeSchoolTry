@@ -1,7 +1,8 @@
-var fs=require('fs');
-fs.readFile(process.argv[2],function(err,data){
-  if(!err){
-    var file=data.toString();
-    console.log(file.split("\n").length-1);
-  }
+//fs.readFile
+
+var fs = require("fs");
+var filePath = process.argv[2];
+
+fs.readFile(filePath, {encoding: 'utf-8'}, function(err, string) {
+	console.log(string.split("\n").length-1);
 })
