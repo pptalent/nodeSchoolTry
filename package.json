@@ -5,21 +5,24 @@
   "main": "index.js",
   "dependencies": {
     "bl": "^0.8.2",
+    "concat-stream": "^1.4.6",
     "duplexer": "^0.1.1",
-    "split": "^0.3.0",
+    "duplexer2": "0.0.2",
+    "formidable": "^1.0.15",
     "request": "^2.40.0",
+    "split": "^0.3.0",
     "stream-combiner": "^0.2.1",
     "strftime": "^0.8.1",
     "tar": "^1.0.0",
-    "through2-map": "^1.4.0",
     "through": "^2.3.4",
+    "through2-map": "^1.4.0",
     "trumpet": "^1.6.5",
     "websocket-stream": "^0.6.0",
-    "zlib": "^1.0.5",
-    "formidable": "^1.0.15",
-    "concat-stream": "^1.4.6"
+    "zlib": "^1.0.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "duplexer": "^0.1.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

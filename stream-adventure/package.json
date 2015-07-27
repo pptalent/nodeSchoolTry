@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "duplexer2": "0.0.2",
     "through2": "^2.0.0",
     "trumpet": "^1.7.1"
   }
